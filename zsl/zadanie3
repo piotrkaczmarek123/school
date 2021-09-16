@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+struct Date{
+	 unsigned short int dd,mm,rrrr;
+};
+
+struct User{
+	string login,password,status,account;
+	unsigned short int id;
+	Date date1;
+};
+
+
+
+int main(int argc, char** argv) {
+	setlocale(LC_CTYPE,"polish");
+	
+	User user{"bobil","noob","online","user",7,{18, 9, 2020}};
+	cout <<"login "<<user.login<< " \npassword "<<user.password <<"\nstatus : "<<user.status
+	<<"\naaccount: "<<user.account<<"\nID "<<user.id<<"\ndolaczenie :"<<user.date1.dd <<"_"<<user.date1.mm<<"_"<<user.date1.rrrr;
+	return 0;
+}
